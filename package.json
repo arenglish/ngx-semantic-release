@@ -11,7 +11,6 @@
   },
   "scripts": {
     "test": "echo 'no tests right now'",
-    "build": "mkdir dist && shopt -s extglob && cp !(node_modules,.circleci) dist/ && ls dist",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -38,7 +37,6 @@
     "@angular/cli": ">=6.0.0"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^4.0.0",
     "@semantic-release/git": "^8.0.0",
     "semantic-release": ">=15.4.4"
   }
