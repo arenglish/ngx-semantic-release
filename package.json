@@ -11,7 +11,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "mkdir dist && shopt -s extglob && cp !(node_modules,.circleci) dist/ && ls dist"
+    "build": "mkdir dist && shopt -s extglob && cp !(node_modules,.circleci) dist/ && ls dist",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,6 @@
   },
   "devDependencies": {
     "@semantic-release/exec": "^4.0.0",
-    "semantic-release": "^16.0.3"
+    "semantic-release": ">=15.4.4"
   }
 }

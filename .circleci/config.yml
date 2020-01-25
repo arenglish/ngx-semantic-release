@@ -2,7 +2,7 @@
 version: 2.1
 # Orchestrate or schedule a set of jobs
 jobs: # a collection of steps
-  build: # runs not using Workflows must have a `build` job as entry point
+  release-master: # runs not using Workflows must have a `build` job as entry point
     docker: # run the steps with Docker
       - image: circleci/node:10.16.3 # ...with this image as the primary container; this is where all `steps` will run
     steps: # a collection of executable commands
@@ -16,8 +16,13 @@ jobs: # a collection of steps
       - run:
           name: install-npm
           command: npm install
-
+      - run:
+          name: test
+          command: npm run test
+      - run:
+          name: release
+          command: npm run semantic-release --debug
 workflows:
-  validate:
+  release-master:
     jobs:
-      - build
+      - release-master
