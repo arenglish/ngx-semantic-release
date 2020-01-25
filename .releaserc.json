@@ -1,0 +1,12 @@
+{
+  "repositoryUrl": "https://github.com/arenglish/ngx-semantic-release.git",
+  "prepare": [
+    {
+      "path": "@semantic-release/exec",
+      "prepareCmd": "npm run build"
+    }
+  ],
+  "publish": [
+    "@semantic-release/github"
+  ]
+}
