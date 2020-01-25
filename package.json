@@ -10,7 +10,7 @@
     "node": ">=10.13"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'no tests right now'",
     "build": "mkdir dist && shopt -s extglob && cp !(node_modules,.circleci) dist/ && ls dist",
     "semantic-release": "semantic-release"
   },
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@semantic-release/exec": "^4.0.0",
+    "@semantic-release/git": "^8.0.0",
     "semantic-release": ">=15.4.4"
   }
 }
